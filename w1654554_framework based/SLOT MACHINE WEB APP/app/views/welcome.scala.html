@@ -1,0 +1,44 @@
+@(message: String, style: String = "java")
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 >|Slot Machine|Designed by Gratia Gamage|</h1>
+        <table>
+            <tr id="style">
+                <td><img id="reel1" src="assets/images/play.png" width="200" height="200">  </td>
+                <td><img id="reel2" src="assets/images/play.png" width="200" height="200">    </td>
+                <td><img id="reel3" src="assets/images/play.png" width="200" height="200">    </td>
+            </tr>
+            <tr>
+                <td colspan="3"><div><button id="spin">SPIN</button></div></td>
+            </tr>
+            <tr>
+                <td id="bet">BET AMOUNT</td>
+                <td id="remain" colspan="2">CREDITS REMAINING</td>
+            </tr>
+            <tr >
+                <td><input type="text" id="betAmount"> </td>
+                <td colspan="2"><input type="text" id="creditsRemaining"> </td>
+            </tr>
+            <tr>
+                <td><button id="betOne">BET ONE($1)</button></td>
+                <td><button id="betMax">BET MAX($3)</button></td>
+                <td><button id="addCredit">ADD CREDIT($1)</button></td>
+            </tr>
+            <tr>
+                <td ><button id="reset">RESET</button></td>
+                <td><input type="text" id="status"></td>
+                <td><button id="statistics">STATISTICS</button></td>
+            </tr>
+            <tr>
+                <td id="payout">Payout</td>
+                <td><input id="payoutValue" type="text"></td>
+            </tr>
+        </table>
+        <script src="@routes.Assets.versioned("javascripts/computations.js")" type="text/javascript"></script>
+    </body>
+</html>
